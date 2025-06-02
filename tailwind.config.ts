@@ -27,11 +27,11 @@ import defaultTheme from "tailwindcss/defaultTheme"
 import { handler } from 'tailwindcss-animate'
 
 const config = {
-  darkMode: ['class','dark2'],
+  darkMode: "class",
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx,css}',
     './src/**/*.{ts,tsx}',
   ],
   prefix: '',

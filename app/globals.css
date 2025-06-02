@@ -120,18 +120,53 @@
     @apply bg-background text-foreground;
   }
 } */
+@import "tailwindcss";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 /* @import '@liveblocks/react-ui/styles.css';
 @import '@liveblocks/react-lexical/styles.css';
 
 @import '../styles/dark-theme.css'; */
 
+
+
+@layer base{
+  :root {
+  --body-bg: #fff;
+  --button-bg: #3371ff;
+  --fist-linear : rgba(220,14,120,0.5);
+  --second-linear: rgba(220,14,120,0.5);
+  --third-linear: rgba(220,140,10,0.5);
+  --fourth-linear: rgba(120,250,101,0.5);
+ }  
+   
+  body {
+    background: linear-gradient(var(--fist-linear), var(--second-linear)),
+                linear-gradient(var(--body-bg), var(--body-bg));
+     animation: shake 0.5s;
+   
+  }
+  @keyframes shake {
+    0% { background: linear-gradient(var(--fist-linear), var(--second-linear)),
+                  linear-gradient(var(--body-bg), var(--body-bg)) }
+    10%, 30%, 50%, 70%, 90% { background: linear-gradient(var(--third-linear), var(--fourth-linear)),
+                  linear-gradient(var(--body-bg), var(--body-bg))
+                }
+    20%, 40%, 60%, 80% { transform: translateX(6px); }
+    100% { transform: translateX(0); }
+  }
+}
+
+
+@layer components {
+  button{
+    background-color: var(--button-bg);
+  }
+}
 /* ========================================== TAILWIND STYLES */
-@layer base {
+/* @layer base {
   :root {
     background: #09111f;
     color: #fff;
@@ -161,7 +196,7 @@
 @layer utilities {
   .text-28-semibold {
     @apply text-[28px] ;
-    /* font-semibold */
+ 
   }
   .text-10-regular {
     @apply text-[10px] font-normal;
@@ -237,13 +272,11 @@
   .document-title-input {
     @apply min-w-[78px] flex-1 border-none bg-transparent px-0 text-left text-base  leading-[24px] focus-visible:ring-0 focus-visible:ring-offset-0 disabled:text-black sm:text-xl md:text-center !important;
   
-  /* font-semibold */
   }
 
   .document-title {
     @apply line-clamp-1 border-dark-400 text-base  leading-[24px] sm:pl-0 sm:text-xl;
 
-    /* font-semibold */
   }
 
   .view-only-tag {
@@ -278,12 +311,10 @@
     @apply flex size-full h-screen items-center justify-center gap-3 text-white;
   }
 
-  /* ======================== Auth Pages */
   .auth-page {
     @apply flex h-screen w-full flex-col items-center justify-center gap-10;
   }
 
-  /* ======================== Home Page */
   .home-container {
     @apply relative flex min-h-screen w-full flex-col items-center gap-5 sm:gap-10;
   }
@@ -292,12 +323,16 @@
     @apply flex w-full max-w-[730px] flex-col gap-5;
   }
 
-  /* ======================== CollaborativeRoom */
   .collaborative-room {
     @apply flex size-full max-h-screen flex-1 flex-col items-center overflow-hidden;
   }
+} */
+.dark2 &,
+.dark & {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  /* ...other dark variables... */
 }
-
 /* ======================== Clerk Override */
 .cl-avatarBox {
   width: 36px;
