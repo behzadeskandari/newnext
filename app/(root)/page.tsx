@@ -9,7 +9,7 @@ function Home() {
         // You can set these dynamically if needed
         '--body-bg': '#f0f0f0',
         '--button-bg': '#ff3366',
-      } as React.CSSProperties}></Button>
+      } as React.CSSProperties}>BTN</Button>
   </>)
 }
 
