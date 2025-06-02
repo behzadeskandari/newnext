@@ -132,14 +132,12 @@
 
 /* ========================================== TAILWIND STYLES */
 @layer base {
-  html {
+  :root {
     background: #09111f;
     color: #fff;
     margin: 0;
   }
-    body {
-    @apply bg-[#09111f] text-white m-0;
-  }
+
   .custom-scrollbar::-webkit-scrollbar {
     width: 4px;
     height: 4px;
@@ -162,7 +160,8 @@
 
 @layer utilities {
   .text-28-semibold {
-    @apply text-[28px] font-semibold;
+    @apply text-[28px] ;
+    /* font-semibold */
   }
   .text-10-regular {
     @apply text-[10px] font-normal;
@@ -236,11 +235,15 @@
   }
 
   .document-title-input {
-    @apply min-w-[78px] flex-1 border-none bg-transparent px-0 text-left text-base font-semibold leading-[24px] focus-visible:ring-0 focus-visible:ring-offset-0 disabled:text-black sm:text-xl md:text-center !important;
+    @apply min-w-[78px] flex-1 border-none bg-transparent px-0 text-left text-base  leading-[24px] focus-visible:ring-0 focus-visible:ring-offset-0 disabled:text-black sm:text-xl md:text-center !important;
+  
+  /* font-semibold */
   }
 
   .document-title {
-    @apply line-clamp-1 border-dark-400 text-base font-semibold leading-[24px] sm:pl-0 sm:text-xl;
+    @apply line-clamp-1 border-dark-400 text-base  leading-[24px] sm:pl-0 sm:text-xl;
+
+    /* font-semibold */
   }
 
   .view-only-tag {

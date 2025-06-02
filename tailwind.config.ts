@@ -27,7 +27,7 @@ import defaultTheme from "tailwindcss/defaultTheme"
 import { handler } from 'tailwindcss-animate'
 
 const config = {
-  darkMode: ['class',''],
+  darkMode: ['class','dark2'],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
