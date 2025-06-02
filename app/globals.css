@@ -146,17 +146,26 @@
   body {
     background: linear-gradient(var(--fist-linear), var(--second-linear)),
                 linear-gradient(var(--body-bg), var(--body-bg));
-     animation: shake 0.5s;
-   
+     animation: colorize infinite  30s;
+    animation-direction: alternate;
   }
-  @keyframes shake {
-    0% { background: linear-gradient(var(--fist-linear), var(--second-linear)),
-                  linear-gradient(var(--body-bg), var(--body-bg)) }
-    10%, 30%, 50%, 70%, 90% { background: linear-gradient(var(--third-linear), var(--fourth-linear)),
-                  linear-gradient(var(--body-bg), var(--body-bg))
-                }
-    20%, 40%, 60%, 80% { transform: translateX(6px); }
-    100% { transform: translateX(0); }
+  @keyframes colorize {
+      0% {
+      background: linear-gradient(135deg, #3371ff 0%, #b4c6ee 100%), 
+                  linear-gradient(var(--body-bg), var(--body-bg));
+    }
+    10%, 30%, 50%, 70%, 90% {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%), 
+                  linear-gradient(var(--body-bg), var(--body-bg));
+    }
+    20%, 40%, 60%, 80% {
+      background: linear-gradient(135deg, #3371ff 0%, #b4c6ee 100%), 
+                  linear-gradient(var(--body-bg), var(--body-bg));
+    }
+    100% {
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%), 
+                  linear-gradient(var(--body-bg), var(--body-bg));
+    }
   }
 }
 
